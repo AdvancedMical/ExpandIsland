@@ -1,5 +1,6 @@
 package cn.mcdawncity.expandisland;
 
+import cn.mcdawncity.expandisland.listener.InventoryListener;
 import cn.mcdawncity.expandisland.listener.SelectionListener;
 import cn.mcdawncity.expandisland.utils.Configuration;
 import cn.mcdawncity.expandisland.utils.Worth;
@@ -44,5 +45,6 @@ public final class ExpandIsland extends PPlugin {
     @Override
     protected void registerListener() {
         Bukkit.getPluginManager().registerEvents(new SelectionListener(), this);
+        Bukkit.getPluginManager().registerEvents(new InventoryListener(), this);
     }
 }
