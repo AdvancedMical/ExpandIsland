@@ -2,6 +2,7 @@ package cn.mcdawncity.expandisland;
 
 import cn.mcdawncity.expandisland.listener.SelectionListener;
 import cn.mcdawncity.expandisland.utils.Configuration;
+import cn.mcdawncity.expandisland.utils.Worth;
 import org.bukkit.Bukkit;
 import org.serverct.parrot.parrotx.PPlugin;
 import org.serverct.parrot.parrotx.hooks.VaultUtil;
@@ -34,6 +35,7 @@ public final class ExpandIsland extends PPlugin {
     protected void load() {
         getLogger().info("正在加载ExpandIsland，版本" + getDescription().getVersion());
         vaultUtil = new VaultUtil(this, true);
+        Worth.get().init();
         if (!vaultUtil.isHooks())
             Bukkit.getPluginManager().disablePlugin(this);
         getLogger().info("插件已加载");
